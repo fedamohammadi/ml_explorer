@@ -1,118 +1,79 @@
-# 🤖 ML Explorer
+# ML Explorer 🤖
 
-An interactive, multi-page web application for exploring **Machine Learning** concepts — built entirely in Python with Streamlit. Tune hyperparameters, visualise decision boundaries, compare regression types, and train models live in your browser.
+An interactive, browser-based guide to Machine Learning — no setup, no code required.
+Tune hyperparameters, watch decision boundaries shift in real time, and build intuition for the algorithms that power modern AI.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/fedamohammadi/ml_explorer/main/app.py)
-
-> **Run it locally in one click** → double-click `run.bat`  
-> **Or in your terminal:**
-> ```bash
-> # from the repo root
-> .venv\Scripts\streamlit run app.py
-> ```
+**[▶ Open the live app](https://mlexplorer-cuzhkegkswbvxjiy4vfpno.streamlit.app/)**
 
 ---
 
-## 📋 Table of Contents
+## What is this?
 
-- [Overview](#overview)
-- [Pages](#pages)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Running the App](#running-the-app)
-- [Deploy to the Cloud](#deploy-to-the-cloud)
-- [Project Structure](#project-structure)
+ML Explorer is a self-contained learning tool that covers applied machine learning from the ground up — probability distributions, regression mathematics, classification algorithms, ensemble methods, and model evaluation. Every concept is paired with a live, interactive demo where you control the parameters and see results instantly, without writing a single line of code.
+
+It is designed as a practical companion for anyone studying data science, econometrics, or machine learning who wants to go beyond textbook formulas and develop real intuition for how these algorithms behave.
 
 ---
 
-## Overview
-
-ML Explorer is a self-contained learning tool that covers the full breadth of applied machine learning — from probability distributions and regression mathematics to ensemble methods and model evaluation. Every concept is paired with an **interactive demo** where you control the parameters and see results instantly.
-
-It is designed to be used alongside the `Fundamentals of Python` learning repository as a practical companion to the econometrics and data analysis scripts.
-
----
-
-## Pages
-
-### 🏠 Home
-- What is Machine Learning? — taxonomy and key concepts
-- Glossary of core terms (features, overfitting, gradient descent, cross-validation, …)
-- Quick-navigation overview of all topics
+## What will I learn?
 
 ### 📊 Supervised Learning
-Five fully interactive tabs:
+Five fully interactive demos:
 
-| Tab | What you can do |
-|-----|----------------|
-| **Linear Regression** | Adjust slope, noise, sample size. Toggle residual lines. Live R² and RMSE. |
-| **Logistic Regression** | Control class separation and regularisation C. Live decision boundary contour. |
-| **Decision Tree** | Tune depth and criterion (Gini / Entropy). Visualise decision regions. |
-| **Random Forest** | Set number of trees, depth, feature fraction. Compare against a single tree. |
-| **KNN & SVM** | Switch between algorithms. Tune K, kernel, C, gamma. Side-by-side decision boundary. |
+| Topic | What you can explore |
+|-------|----------------------|
+| **Linear Regression** | Adjust slope, noise, and sample size. Toggle residual lines. Watch R² and RMSE update live. |
+| **Logistic Regression** | Control class separation and regularisation strength. See the decision boundary shift in real time. |
+| **Decision Tree** | Tune depth and splitting criterion (Gini / Entropy). Visualise how regions are carved out. |
+| **Random Forest** | Set the number of trees, depth, and feature fraction. Compare against a single tree side-by-side. |
+| **KNN & SVM** | Switch between algorithms. Tune K, kernel type, C, and gamma. |
 
 ### 🔍 Unsupervised Learning
-Three tabs:
+Three demos covering structure discovery in unlabelled data:
 
-| Tab | What you can do |
-|-----|----------------|
-| **K-Means** | Choose K, spread, and sample size. Voronoi regions + elbow chart to select optimal K. |
-| **PCA** | Control features and components. Scree plot with cumulative variance. 2D projection scatter. |
-| **DBSCAN** | Pick dataset shape (Moons / Circles / Blobs). Tune ε and min_samples. Noise points highlighted. |
+| Topic | What you can explore |
+|-------|----------------------|
+| **K-Means Clustering** | Choose K, spread, and sample size. See Voronoi regions and use the elbow chart to pick optimal K. |
+| **PCA** | Control the number of features and components. Inspect the scree plot and 2D projection. |
+| **DBSCAN** | Switch between Moons, Circles, and Blobs datasets. Tune ε and min_samples to see noise points appear. |
 
 ### 📈 Probability & Regression
-Three tabs:
+Three demos on the mathematical foundations of ML:
 
-| Tab | What you can do |
-|-----|----------------|
-| **Distributions** | Explore Normal, Binomial, Poisson, Exponential, and Uniform. Full parameter control + optional CDF overlay. |
-| **Regression Types** | Compare OLS, Ridge, Lasso, and Polynomial on the same noisy data. Tune α, polynomial degree, noise. |
-| **Bias-Variance Tradeoff** | Adjust polynomial degree and watch bias² vs variance change across bootstrap samples. Live decomposition chart. |
+| Topic | What you can explore |
+|-------|----------------------|
+| **Probability Distributions** | Explore Normal, Binomial, Poisson, Exponential, and Uniform. Full parameter control with optional CDF overlay. |
+| **Regression Types** | Compare OLS, Ridge, Lasso, and Polynomial on the same noisy dataset. Tune α, polynomial degree, and noise. |
+| **Bias-Variance Tradeoff** | Increase polynomial degree and watch bias² vs variance decompose across bootstrap samples. |
 
 ### 🎮 Model Playground
-A full end-to-end training environment:
+A full end-to-end training environment — pick a dataset, pick a model, tune it, and evaluate it:
 
 - **5 datasets** — Iris, Wine, Breast Cancer, Synthetic Classification, Synthetic Regression
 - **9 models** — Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, KNN, SVM, Naive Bayes, Ridge, Lasso
-- **Full hyperparameter control** from the sidebar
-- **Evaluation outputs** — Accuracy, Precision, Recall, F1, Cross-validation score, Confusion Matrix, ROC / AUC curve, Feature Importance / Coefficients
-- **Dataset preview** table
+- **Hyperparameter controls** in the sidebar, tailored to whichever model you select
+- **Evaluation outputs** — Accuracy, Precision, Recall, F1, Cross-validation score, Confusion Matrix, ROC / AUC curve, Feature Importance
 
 ---
 
-## Features
+## How do I use it?
 
-- **Fully reactive** — every chart updates instantly as you move a slider or change a setting
-- **Dark theme** with a purple/cyan/amber colour palette
-- **Multi-page navigation** via Streamlit's built-in sidebar
-- **No training step needed** — models retrain automatically on every interaction
-- **Educational cards** on every page explaining the intuition behind each algorithm
-- **Zero configuration** — just install dependencies and run
+Just open the app — no account, no installation, no code needed:
 
----
+**[https://mlexplorer-cuzhkegkswbvxjiy4vfpno.streamlit.app/](https://mlexplorer-cuzhkegkswbvxjiy4vfpno.streamlit.app/)**
 
-## Tech Stack
-
-| Library | Purpose |
-|---------|---------|
-| [Streamlit](https://streamlit.io) | Web app framework and reactive UI |
-| [Plotly](https://plotly.com/python/) | Interactive charts and visualisations |
-| [scikit-learn](https://scikit-learn.org) | All ML models and datasets |
-| [NumPy](https://numpy.org) | Numerical computing |
-| [Pandas](https://pandas.pydata.org) | Data manipulation and preview table |
-| [SciPy](https://scipy.org) | Probability distribution functions |
+Use the sidebar to navigate between topics. Every page has controls on the left and a live chart on the right. Move a slider and the chart updates instantly.
 
 ---
 
-## Installation
+## Running it locally
 
-Make sure you have Python 3.10+ and a virtual environment set up at the repo root.
+If you prefer to run the app on your own machine:
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/fedamohammadi/ml_explorer.git
-cd Fundementals-of-Python
+cd ml_explorer
 
 # 2. Create and activate a virtual environment
 python -m venv .venv
@@ -120,54 +81,33 @@ python -m venv .venv
 # source .venv/bin/activate   # macOS / Linux
 
 # 3. Install dependencies
-pip install -r projects/ml_explorer/requirements.txt
+pip install -r requirements.txt
+
+# 4. Launch the app
+streamlit run app.py
 ```
+
+The app will open automatically at `http://localhost:8501`.
 
 ---
 
-## Running the App
+## Tech stack
 
-**Option 1 — One click (Windows)**
-
-Double-click `projects/ml_explorer/run.bat`
-
-**Option 2 — Terminal**
-
-```bash
-# From the repo root
-.venv\Scripts\streamlit run app.py
-```
-
-The app opens automatically at `http://localhost:8501`.
+| Library | Role |
+|---------|------|
+| [Streamlit](https://streamlit.io) | Web app framework and reactive UI |
+| [Plotly](https://plotly.com/python/) | Interactive charts and visualisations |
+| [scikit-learn](https://scikit-learn.org) | All ML models and datasets |
+| [NumPy](https://numpy.org) | Numerical computing |
+| [Pandas](https://pandas.pydata.org) | Data manipulation |
+| [SciPy](https://scipy.org) | Probability distribution functions |
 
 ---
 
-## Deploy to the Cloud
-
-You can host ML Explorer for free on [Streamlit Community Cloud](https://streamlit.io/cloud) so anyone can access it via a permanent public URL — no local setup required.
-
-**Steps:**
-
-1. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub
-2. Click **"New app"**
-3. Set the following:
-
-   | Field | Value |
-   |-------|-------|
-   | Repository | `fedamohammadi/ml_explorer` |
-   | Branch | `main` |
-   | Main file path | `app.py` |
-
-4. Click **"Deploy"** — your permanent public URL will be ready in ~2 minutes
-
-Once deployed, the badge at the top of this README will link directly to your live app.
-
----
-
-## Project Structure
+## Project structure
 
 ```
-projects/ml_explorer/
+ml_explorer/
 │
 ├── app.py                          # Home page (entry point)
 │
@@ -178,17 +118,10 @@ projects/ml_explorer/
 │   └── 4_Model_Playground.py       # Full train/evaluate/compare UI
 │
 ├── utils/
-│   ├── __init__.py
-│   └── styles.py                   # Shared CSS, colour palette, helper functions
+│   └── styles.py                   # Shared theme, colours, CSS helpers
 │
 ├── .streamlit/
 │   └── config.toml                 # Dark theme configuration
 │
-├── requirements.txt                # Python dependencies
-├── run.bat                         # One-click launcher (Windows)
-└── README.md                       # This file
+└── requirements.txt
 ```
-
----
-
-*Part of the [Fundamentals of Python](https://github.com/fedamohammadi/ml_explorer) learning repository.*
