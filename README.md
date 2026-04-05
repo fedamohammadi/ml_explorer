@@ -1,4 +1,4 @@
-# ML Explorer 🤖
+# 🤖 ML Explorer
 
 An interactive, browser-based guide to Machine Learning — no setup, no code required.
 Tune hyperparameters, watch decision boundaries shift in real time, and build intuition for the algorithms that power modern AI.
@@ -7,7 +7,7 @@ Tune hyperparameters, watch decision boundaries shift in real time, and build in
 
 ---
 
-## What is this?
+## 💡 What is this?
 
 ML Explorer is a self-contained learning tool that covers applied machine learning from the ground up — probability distributions, regression mathematics, classification algorithms, ensemble methods, and model evaluation. Every concept is paired with a live, interactive demo where you control the parameters and see results instantly, without writing a single line of code.
 
@@ -15,7 +15,7 @@ It is designed as a practical companion for anyone studying data science, econom
 
 ---
 
-## What will I learn?
+## 🎓 What will I learn?
 
 ### 📊 Supervised Learning
 Five fully interactive demos:
@@ -49,14 +49,14 @@ Three demos on the mathematical foundations of ML:
 ### 🎮 Model Playground
 A full end-to-end training environment — pick a dataset, pick a model, tune it, and evaluate it:
 
-- **5 datasets** — Iris, Wine, Breast Cancer, Synthetic Classification, Synthetic Regression
-- **9 models** — Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, KNN, SVM, Naive Bayes, Ridge, Lasso
-- **Hyperparameter controls** in the sidebar, tailored to whichever model you select
-- **Evaluation outputs** — Accuracy, Precision, Recall, F1, Cross-validation score, Confusion Matrix, ROC / AUC curve, Feature Importance
+- 🗂️ **5 datasets** — Iris, Wine, Breast Cancer, Synthetic Classification, Synthetic Regression
+- 🧠 **9 models** — Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, KNN, SVM, Naive Bayes, Ridge, Lasso
+- ⚙️ **Hyperparameter controls** in the sidebar, tailored to whichever model you select
+- 📉 **Evaluation outputs** — Accuracy, Precision, Recall, F1, Cross-validation score, Confusion Matrix, ROC / AUC curve, Feature Importance
 
 ---
 
-## How do I use it?
+## 🚀 How do I use it?
 
 Just open the app — no account, no installation, no code needed:
 
@@ -66,32 +66,7 @@ Use the sidebar to navigate between topics. Every page has controls on the left 
 
 ---
 
-## Running it locally
-
-If you prefer to run the app on your own machine:
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/fedamohammadi/ml_explorer.git
-cd ml_explorer
-
-# 2. Create and activate a virtual environment
-python -m venv .venv
-.venv\Scripts\activate        # Windows
-# source .venv/bin/activate   # macOS / Linux
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Launch the app
-streamlit run app.py
-```
-
-The app will open automatically at `http://localhost:8501`.
-
----
-
-## Tech stack
+## 🛠️ Tech stack
 
 | Library | Role |
 |---------|------|
@@ -104,24 +79,33 @@ The app will open automatically at `http://localhost:8501`.
 
 ---
 
-## Project structure
+## 📁 Project structure
 
 ```
-ml_explorer/
+📁 ml_explorer/
 │
-├── app.py                          # Home page (entry point)
+├── 🐍 app.py                          # Home page (entry point)
 │
-├── pages/
-│   ├── 1_Supervised_Learning.py    # Linear Regression, Logistic, Tree, RF, KNN/SVM
-│   ├── 2_Unsupervised_Learning.py  # K-Means, PCA, DBSCAN
-│   ├── 3_Probability_Regression.py # Distributions, Regression types, Bias-Variance
-│   └── 4_Model_Playground.py       # Full train/evaluate/compare UI
+├── 📁 pages/
+│   ├── 🐍 1_Supervised_Learning.py
+│   ├── 🐍 2_Unsupervised_Learning.py
+│   ├── 🐍 3_Probability_Regression.py
+│   └── 🐍 4_Model_Playground.py
 │
-├── utils/
-│   └── styles.py                   # Shared theme, colours, CSS helpers
+├── 📁 utils/
+│   └── 🐍 styles.py                   # Shared theme, colours, CSS helpers
 │
-├── .streamlit/
-│   └── config.toml                 # Dark theme configuration
+├── 📁 .streamlit/
+│   └── ⚙️  config.toml                # Dark theme configuration
 │
-└── requirements.txt
+└── 📄 requirements.txt
 ```
+
+---
+
+## 👤 Author
+
+**Feda Mohammadi**
+Quantitative Economics and Mathematics
+
+📧 [mohammadif@berea.edu](mailto:mohammadif@berea.edu)
