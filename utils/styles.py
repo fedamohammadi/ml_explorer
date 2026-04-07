@@ -150,6 +150,11 @@ def inject_css() -> None:
         display: flex;
         flex-direction: column;
     }}
+    div[data-testid="stHorizontalBlock"] > div[data-testid="column"] [data-testid="stMarkdownContainer"]:only-child > div {{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }}
     div[data-testid="stHorizontalBlock"] > div[data-testid="column"] [data-testid="stMarkdownContainer"]:only-child .ml-card {{
         flex: 1;
         margin-bottom: 0;
