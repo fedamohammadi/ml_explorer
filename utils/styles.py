@@ -124,6 +124,37 @@ def inject_css() -> None:
         margin: 1.5rem 0;
     }}
 
+    /* ── Equal-height cards in single-card column rows ── */
+    div[data-testid="stHorizontalBlock"] {{
+        align-items: stretch;
+    }}
+    div[data-testid="stHorizontalBlock"] > div[data-testid="column"] {{
+        display: flex;
+        flex-direction: column;
+    }}
+    div[data-testid="stHorizontalBlock"] > div[data-testid="column"] > div,
+    div[data-testid="stHorizontalBlock"] > div[data-testid="column"] [data-testid="stVerticalBlockBorderWrapper"] {{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }}
+    div[data-testid="stHorizontalBlock"] > div[data-testid="column"] [data-testid="stVerticalBlock"] {{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }}
+    div[data-testid="stHorizontalBlock"] > div[data-testid="column"] [data-testid="stMarkdownContainer"]:only-child {{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }}
+    div[data-testid="stHorizontalBlock"] > div[data-testid="column"] [data-testid="stMarkdownContainer"]:only-child .ml-card {{
+        flex: 1;
+        margin-bottom: 0;
+    }}
+
     /* ── Streamlit widget overrides ── */
     div[data-testid="metric-container"] {{
         background: {CARD};
